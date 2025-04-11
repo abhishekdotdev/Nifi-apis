@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "node node --trace-warnings src/index.js",
+    "dev": "nodemon --node-arg=--no-warnings src/index.js"
   },
   "keywords": [],
   "author": "",

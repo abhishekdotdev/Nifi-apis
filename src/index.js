@@ -1,6 +1,7 @@
 import express from 'express';
 import studentRouter from './routes/student.js';
 import uploadRouter from './routes/uploadRoute.js';
+import responseRouter from './routes/responseRoute.js';
 
 import dotenv from 'dotenv';
 dotenv.config();
@@ -13,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1', studentRouter);
 app.use('/api/v1', uploadRouter);
+app.use('/api/v1', responseRouter);
 
 app.get('/', (req, res) => {
   res.status(200).json({
